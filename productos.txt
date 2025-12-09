@@ -1,0 +1,7 @@
+  {
+        "nombre": "Armario",
+        "descripcion": "Perfecto para habitaciones pequeñas",
+        "precio": "$185.00",
+        "imagen": "https://via.placeholder.com/200",
+        "categoria": "Armarios"
+    },
