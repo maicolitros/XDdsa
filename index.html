@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llar a Llar</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+        header { background: linear-gradient(to right, #6a11cb, #2575fc); color: white; padding: 30px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 36px; }
+        nav { margin-top: 15px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        nav a:hover { color: #ffdd59; }
+        section { padding: 60px 20px; text-align: center; }
+        #sobre-mi { background-color: #ecf0f1; }
+        #sobre-mi img { border-radius: 50%; margin-top: 20px; width: 150px; height: 150px; object-fit: cover; }
+
+        #catalogo input, #catalogo select { padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 20px; font-size: 16px; }
+        .productos-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px; }
+        .producto-card { background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); padding: 20px; width: 220px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+        .producto-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; }
+        .producto-card:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+        .producto-card button { margin-top: 10px; padding: 10px 15px; background-color: #2575fc; color: white; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+        .producto-card button:hover { background-color: #6a11cb; }
+
+        #contacto { background-color: #ecf0f1; }
+        form { display: inline-block; text-align: left; max-width: 350px; width: 100%; }
+        form label { font-weight: bold; }
+        form input, form textarea { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; box-sizing: border-box; }
+        form button { padding: 12px 25px; background-color: #2575fc; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        form button:hover { background-color: #6a11cb; }
+
+        footer { background-color: #2c3e50; color: white; text-align: center; padding: 20px; }
+        footer a { color: #ffdd59; text-decoration: none; margin: 0 10px; transition: 0.3s; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>¡Bienvenido a Llar a Llar!</h1>
+        <nav>
+            <a href="#sobre-mi">Sobre nosotros</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="sobre-mi">
+        <h2>Sobre nosotros</h2>
+        <p>¡Hola, Bienvenido a Llar a Llar! Contamos con gran variedad de artículos para el hogar.</p>
+        <img src="https://via.placeholder.com/150" alt="Foto de presentación">
+    </section>
+
+    <section id="catalogo">
+        <h2>Catálogo de Productos</h2>
+        <input type="text" id="busqueda" placeholder="Buscar producto..." style="width:80%; max-width:300px;">
+        <select id="filtro">
+            <option value="">Todas las categorías</option>
+        </select>
+        <div class="productos-container"></div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Escríbeme un mensaje:</p>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Llar a Llar. Todos los derechos reservados.</p>
+        <p>Síguenos en: 
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">WhatsApp</a>
+        </p>
+    </footer>
+
+    <script>
+        let productosGlobal = [];
+
+        const contenedor = document.querySelector('.productos-container');
+        const busquedaInput = document.getElementById('busqueda');
+        const filtroSelect = document.getElementById('filtro');
+
+        // Cargar productos desde JSON
+        fetch('productos.json')
+            .then(response => response.json())
+            .then(productos => {
+                productosGlobal = productos;
+                generarCategorias(productosGlobal);
+                mostrarProductos(productosGlobal);
+            });
+
+        function mostrarProductos(productos) {
+            contenedor.innerHTML = '';
+            productos.forEach(producto => {
+                const card = document.createElement('div');
+                card.classList.add('producto-card');
+                card.innerHTML = `
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
+                    <h3>${producto.nombre}</h3>
+                    <p>${producto.descripcion}</p>
+                    <p><strong>${producto.precio}</strong></p>
+                    <p><em>${producto.categoria}</em></p>
+                    <button onclick="contactar('${producto.nombre}')">Me interesa</button>
+                `;
+                contenedor.appendChild(card);
+            });
+        }
+
+        function contactar(producto) {
+            const nombreProducto = document.getElementById('mensaje');
+            nombreProducto.value = `Estoy interesado en: ${producto}`;
+            window.location.href = "#contacto";
+        }
+
+        function filtrarProductos() {
+            const texto = busquedaInput.value.toLowerCase();
+            const categoria = filtroSelect.value;
+            const filtrados = productosGlobal.filter(p => 
+                p.nombre.toLowerCase().includes(texto) &&
+                (categoria === '' || p.categoria === categoria)
+            );
+            mostrarProductos(filtrados);
+        }
+
+        busquedaInput.addEventListener('input', filtrarProductos);
+        filtroSelect.addEventListener('change', filtrarProductos);
+
+        function generarCategorias(productos) {
+            const categorias = [...new Set(productos.map(p => p.categoria))];
+            categorias.forEach(cat => {
+                const option = document.createElement('option');
+                option.value = cat;
+                option.textContent = cat;
+                filtroSelect.appendChild(option);
+            });
+        }
+    </script>
+
+</body>
+</html>
