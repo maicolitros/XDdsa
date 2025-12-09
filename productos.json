@@ -1,9 +1,9 @@
 [
   {
-    "nombre": "Sofá cómodo",
-    "descripcion": "Perfecto para tu sala de estar.",
-    "precio": "$300",
-    "imagen": "https://via.placeholder.com/200",
+    "nombre": "Colchon Grafeno",
+    "descripcion": "Comodos y duraderos, individual o matrimonial.",
+    "precio": "desde 115.00€",
+    "imagen": "https://tse4.mm.bing.net/th/id/OIP.3YIF5S8--3rPr1nrAYtRowAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
     "categoria": "Sala"
   },
   {
@@ -21,6 +21,7 @@
     "categoria": "Dormitorio"
   }
 ]
+
 
 
 
