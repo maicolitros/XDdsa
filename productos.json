@@ -20,4 +20,12 @@
         "imagen": "https://via.placeholder.com/200",
         "categoria": "Dormitorio"
     }
+     {
+         "nombre": "Armario Mediano",
+        "descripcion": "Armario comodo para habitaciones pequeñas 100x200x50cm.",
+        "precio": "185.00€",
+        "categoria": "Armarios",
+        "imagen": "https://via.placeholder.com/300x200"
+      }
 ]
+
