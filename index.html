@@ -87,7 +87,7 @@
         <p>Síguenos en: 
             <a href="#">Facebook</a> |
             <a href="#">Instagram</a> |
-            <a href="#">WhatsApp</a>
+            <a href="https://wa.me/34643261975" target="_blank">WhatsApp</a>
         </p>
     </footer>
 
@@ -125,9 +125,7 @@
         }
 
         function contactar(producto) {
-            const nombreProducto = document.getElementById('mensaje');
-            nombreProducto.value = `Estoy interesado en: ${producto}`;
-            window.location.href = "#contacto";
+            window.open(`https://wa.me/34643261975?text=Hola! Estoy interesado en el producto: ${encodeURIComponent(producto)}`, '_blank');
         }
 
         function filtrarProductos() {
