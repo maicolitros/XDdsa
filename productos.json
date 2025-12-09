@@ -14,6 +14,27 @@
     "categoria": "Armarios"
   },
   {
+    "nombre": "Sofa Modelo Oscar",
+    "descripcion": "Confortable y suave para tu sala de estar con sus 265cm.",
+    "precio": "439€",
+    "imagen": "https://www.atrapamuebles.com/34157-large_default/chaiselongue-derecha-oscar-gris-nido.jpg",
+    "categoria": "Sofas"
+  },
+    {
+    "nombre": "Colchon Grafeno",
+    "descripcion": "Comodos y duraderos, individual o matrimonial.",
+    "precio": "desde 115.00€",
+    "imagen": "https://tse4.mm.bing.net/th/id/OIP.3YIF5S8--3rPr1nrAYtRowAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
+    "categoria": "Colchon"
+  },
+  {
+    "nombre": "Armario",
+    "descripcion": "Perfecto para habitaciones pequeñas",
+    "precio": "$185.00",
+    "imagen": "https://media.adeo.com/media/3146693/media.jpg",
+    "categoria": "Armarios"
+  },
+  {
     "nombre": "Juego de sábanas",
     "descripcion": "Confortable y suave para tu dormitorio.",
     "precio": "$50",
@@ -21,6 +42,7 @@
     "categoria": "Dormitorio"
   }
 ]
+
 
 
 
