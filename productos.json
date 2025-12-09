@@ -16,7 +16,7 @@
   {
     "nombre": "Sofa Modelo Oscar",
     "descripcion": "Confortable y suave para tu sala de estar con sus 265cm.",
-    "precio": "439€",
+    "precio": "439.00€",
     "imagen": "https://www.atrapamuebles.com/34157-large_default/chaiselongue-derecha-oscar-gris-nido.jpg",
     "categoria": "Hogar"
   },
@@ -42,6 +42,7 @@
     "categoria": "Hogar"
   }
 ]
+
 
 
 
