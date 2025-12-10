@@ -1,39 +1,26 @@
 [
     {
-        "nombre": "Armario",
+        "nombre": "Sofá cómodo",
         "descripcion": "Perfecto para tu sala de estar.",
         "precio": "$300",
-        "imagenes": [
-            "https://th.bing.com/th?id=OPEC.P8SPk%2bL%2fAadgmA474C474&w=248&h=248&o=5&pid=21.1&ucfimg=1",
-            "https://via.placeholder.com/300?text=Foto+2",
-            "https://via.placeholder.com/300?text=Foto+3"
-        ]
+        "imagen": "https://via.placeholder.com/300",
+        "categoria": "Sala"
     },
-
     {
-        "nombre": "Armario",
-        "descripcion": "Perfecto para habitaciones pequeñas",
-        "precio": "$185",
-        "imagenes": [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300?text=Interior",
-            "https://via.placeholder.com/300?text=Detalles"
-        ]
+        "nombre": "Armario Moderno",
+        "descripcion": "Perfecto para habitaciones pequeñas.",
+        "precio": "$185.00",
+        "imagen": "https://via.placeholder.com/300",
+        "categoria": "Armarios"
     },
-
     {
         "nombre": "Juego de sábanas",
         "descripcion": "Confortable y suave para tu dormitorio.",
         "precio": "$50",
-        "imagenes": [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300?text=Color+2",
-            "https://via.placeholder.com/300?text=Color+3"
-        ]
+        "imagen": "https://via.placeholder.com/300",
+        "categoria": "Dormitorio"
     }
 ]
-
-
 
 
 
