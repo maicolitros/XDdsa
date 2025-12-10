@@ -1,10 +1,10 @@
 [
     {
-        "nombre": "Sofá cómodo",
+        "nombre": "Armario",
         "descripcion": "Perfecto para tu sala de estar.",
         "precio": "$300",
         "imagenes": [
-            "https://via.placeholder.com/300",
+            "https://th.bing.com/th?id=OPEC.P8SPk%2bL%2fAadgmA474C474&w=248&h=248&o=5&pid=21.1&ucfimg=1",
             "https://via.placeholder.com/300?text=Foto+2",
             "https://via.placeholder.com/300?text=Foto+3"
         ]
@@ -32,6 +32,7 @@
         ]
     }
 ]
+
 
 
 
