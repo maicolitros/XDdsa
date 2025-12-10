@@ -1,50 +1,38 @@
 [
-  {
-    "nombre": "Colchon Grafeno",
-    "descripcion": "Comodos y duraderos, individual o matrimonial.",
-    "precio": "desde 115.00€",
-    "imagen": "https://tse4.mm.bing.net/th/id/OIP.3YIF5S8--3rPr1nrAYtRowAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
-    "categoria": "Hogar"
-     "galeria": [
-       "imagenes/sofa2.jpg",
-      "imagenes/sofa3.jpg"
-  },
-  {
-    "nombre": "Armario",
-    "descripcion": "Perfecto para habitaciones pequeñas",
-    "precio": "$185.00",
-    "imagen": "https://media.adeo.com/media/3146693/media.jpg",
-    "categoria": "Hogars"
-  },
-  {
-    "nombre": "Sofa Modelo Oscar",
-    "descripcion": "Confortable y suave para tu sala de estar con sus 265cm.",
-    "precio": "439.00€",
-    "imagen": "https://www.atrapamuebles.com/34157-large_default/chaiselongue-derecha-oscar-gris-nido.jpg",
-    "categoria": "Hogar"
-  },
     {
-    "nombre": "Cabecero estilo Rania",
-    "descripcion": "Con un diseño increible, se adaptan a tu medida y gusto.",
-    "precio": "desde 88.00€",
-    "imagen": "https://media.adeo.com/mkp/56847d6e38fdf1accfd63cd4028bced2/media.jpeg?width=650&height=650&format=jpg&quality=80&fit=bounds",
-    "categoria": "Hogar"
-  },
-  {
-    "nombre": "Comoda Grande",
-    "descripcion": "Comoda amplia de 4 cajones, medidas 78x90x36cm",
-    "precio": "105.00€",
-    "imagen": "https://www.ikea.com/es/es/images/products/malm-comoda-4-cajones-blanco__0484879_pe621344_s5.jpg?f=m",
-    "categoria": "Hogar"
-  },
-  {
-    "nombre": "Litera Eco",
-    "descripcion": "Descubre nuestras literas en acero 90x190cm.",
-    "precio": "209.00€",
-    "imagen": "https://www.bing.com/th?id=OPEC.IG%2fkO2esQi3VvQ474C474&o=5&pid=21.1&w=128&h=128&qlt=100&dpr=1&o=2&bw=6&bc=FFFFFF",
-    "categoria": "Hogar"
-  }
+        "nombre": "Sofá cómodo",
+        "descripcion": "Perfecto para tu sala de estar.",
+        "precio": "$300",
+        "imagenes": [
+            "https://via.placeholder.com/300",
+            "https://via.placeholder.com/300?text=Foto+2",
+            "https://via.placeholder.com/300?text=Foto+3"
+        ]
+    },
+
+    {
+        "nombre": "Armario",
+        "descripcion": "Perfecto para habitaciones pequeñas",
+        "precio": "$185",
+        "imagenes": [
+            "https://via.placeholder.com/300",
+            "https://via.placeholder.com/300?text=Interior",
+            "https://via.placeholder.com/300?text=Detalles"
+        ]
+    },
+
+    {
+        "nombre": "Juego de sábanas",
+        "descripcion": "Confortable y suave para tu dormitorio.",
+        "precio": "$50",
+        "imagenes": [
+            "https://via.placeholder.com/300",
+            "https://via.placeholder.com/300?text=Color+2",
+            "https://via.placeholder.com/300?text=Color+3"
+        ]
+    }
 ]
+
 
 
 
